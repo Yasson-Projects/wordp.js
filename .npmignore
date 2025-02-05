@@ -1,8 +1,17 @@
+# Folders
 /src
 /node_modules
+/.husky
 
+# Files
 .env
 .DS_Store
 
+# Typescript
 tsconfig.json
 tsup.config.ts
+
+# Eslint ignores
+.eslintignore
+.lintstagedrc
+eslint.config.mjs
