@@ -6,6 +6,7 @@
 # Files
 .env
 .DS_Store
+package-lock.json
 
 # Typescript
 tsconfig.json
@@ -15,3 +16,4 @@ tsup.config.ts
 .eslintignore
 .lintstagedrc
 eslint.config.mjs
+.prettierrc.json

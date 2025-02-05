@@ -13,7 +13,7 @@ export default [
       "@typescript-eslint/no-duplicate-enum-values": "warn",
       "@typescript-eslint/no-explicit-any": "warn"
     },
-    languageOptions: { globals: globals.node },
+    languageOptions: { globals: globals.browser },
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,

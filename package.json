@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "type": "./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "npx tsup",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "node ./test/module.testing.js"
   },
   "keywords": ["wordpress", "wrapped", "lib"],
   "author": "Juanda Castro",
