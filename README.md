@@ -21,7 +21,9 @@ api.post({
 // Metodo para ver todas las entradas
 api.posts({
   fields: [Fieds.TITLE, Fieds.CONTENT, Fieds.DATE, Fieds.EXCERPT, Fieds.LINK],
-  embed: [Embedded.TERM]
+  embed: [Embedded.TERM],
+  page: 1,
+  per_page: 10 // Maximo 100!
 }).then(e => {
   console.log(e._embedded['wp:term'][0])
 })
