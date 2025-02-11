@@ -1,24 +1,15 @@
-export enum Fieds {
-  AUTHOR = "author",
-  ID = "id",
-  EXCERPT = "excerpt",
-  TITLE = "title",
-  LINK = "_links",
-  DATE = "date",
-  MODIFY = "modified",
-  STATUS = "status",
-  CONTENT = "content"
-}
-export enum Embedded {
-  AUTHOR = "author",
-  MEDIA = "wp:featuredmedia",
-  TERM = "wp:term"
-}
+import { Embedded, Fieds, OrderByType, OrderType } from "./enums/args.enum"
+
 export interface Posts {
-  fields: Fieds[],
+  fields: Fieds[]
   embed: Embedded[]
+  page: number
+  per_page: number
+  order?: OrderType
+  orderBy?: OrderByType
+  offset?: number
 }
 
-export interface Post extends Posts {
+export interface Post extends Omit<Posts, "order" | "orderBy" | "offset" | "page" | "per_page"> {
   id: number
 }
